@@ -16,5 +16,6 @@
         "psr-4": {
             "Cicc\\": "src/"
         }
-    }
+    },
+	"minimum-stability": "stable"
 }
