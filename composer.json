@@ -17,5 +17,5 @@
             "Cicc\\": "src/"
         }
     },
-	"minimum-stability": "stable"
+	"minimum-stability": "dev-master"
 }
