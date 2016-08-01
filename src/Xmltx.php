@@ -2,16 +2,16 @@
 /**
  * Created by PhpStorm.
  * User: wucheng
- * Date: 2016/7/19
- * Time: 15:55
+ * Date: 2016/8/1
+ * Time: 17:10
  */
 
 namespace Cicc;
 
 
-class Service
+class Xmltx
 {
-    protected $xmltx1111=<<<XML
+    public $xmltx1111 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
 	<Head> 
@@ -34,7 +34,7 @@ class Service
 </Request>
 XML;
 
-protected $xmltx1112=<<<XML
+    public $xmltx1112 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 	<Head>
@@ -55,7 +55,7 @@ protected $xmltx1112=<<<XML
 </Request>
 XML;
 
-protected $xmltx1115=<<<XML
+    public $xmltx1115 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 	<Head>
@@ -76,7 +76,7 @@ protected $xmltx1115=<<<XML
 </Request>
 XML;
 
-protected $xmltx1118=<<<XML
+    public $xmltx1118 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -92,7 +92,7 @@ protected $xmltx1118=<<<XML
 </Request>
 XML;
 
-protected $xmltx1119=<<<XML
+    public $xmltx1119 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 	<Head>
@@ -114,7 +114,7 @@ protected $xmltx1119=<<<XML
 </Request>
 XML;
 
-protected $xmltx1120=<<<XML
+    public $xmltx1120 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -127,7 +127,7 @@ protected $xmltx1120=<<<XML
 </Request>
 XML;
 
-protected $xmltx1121=<<<XML
+    public $xmltx1121 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -140,7 +140,7 @@ protected $xmltx1121=<<<XML
 </Request>
 XML;
 
-protected $xmltx1131=<<<XML
+    public $xmltx1131 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -168,7 +168,7 @@ protected $xmltx1131=<<<XML
 </Request>
 XML;
 
-protected $xmltx1132=<<<XML
+    public $xmltx1132 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -181,7 +181,7 @@ protected $xmltx1132=<<<XML
 </Request>
 XML;
 
-protected $xmltx1133=<<<XML
+    public $xmltx1133 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -198,7 +198,7 @@ protected $xmltx1133=<<<XML
 </Request>
 XML;
 
-protected $xmltx1134=<<<XML
+    public $xmltx1134 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -225,7 +225,7 @@ protected $xmltx1134=<<<XML
 </Request>
 XML;
 
-protected $xmltx1138=<<<XML
+    public $xmltx1138 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -242,14 +242,14 @@ protected $xmltx1138=<<<XML
 </Request>
 XML;
 
-protected $xmlNotification=<<<XML
+    public $xmlNotification = <<<XML
 <?xml version="1.0" encoding="UTF-8"?><Response version="2.0"><Head><Code/><Message/></Head></Response>
 XML;
 
     /**
-    PayeeList can be composited by several Payees.
+     * PayeeList can be composited by several Payees.
      */
-protected $xmltx1311=<<<XML
+    public $xmltx1311 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
 	<Head> 
@@ -276,7 +276,7 @@ protected $xmltx1311=<<<XML
 </Request>
 XML;
 
-protected $xmltx1312=<<<XML
+    public $xmltx1312 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
 	<Head> 
@@ -300,7 +300,7 @@ protected $xmltx1312=<<<XML
 </Request>
 XML;
 
-protected $xmltx1318=<<<XML
+    public $xmltx1318 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -316,7 +316,7 @@ protected $xmltx1318=<<<XML
 </Request>
 XML;
 
-protected $xmltx1320=<<<XML
+    public $xmltx1320 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -329,7 +329,7 @@ protected $xmltx1320=<<<XML
 </Request>
 XML;
 
-protected $xmltx1321=<<<XML
+    public $xmltx1321 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -342,7 +342,7 @@ protected $xmltx1321=<<<XML
 </Request>
 XML;
 
-protected $xmltx1330=<<<XML
+    public $xmltx1330 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -357,7 +357,7 @@ protected $xmltx1330=<<<XML
 </Request>
 XML;
 
-protected $xmltx1333=<<<XML
+    public $xmltx1333 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -374,7 +374,7 @@ protected $xmltx1333=<<<XML
 </Request>
 XML;
 
-protected $xmltx1341=<<<XML
+    public $xmltx1341 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -401,7 +401,7 @@ protected $xmltx1341=<<<XML
 </Request>
 XML;
 
-protected $xmltx1343=<<<XML
+    public $xmltx1343 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -428,7 +428,7 @@ protected $xmltx1343=<<<XML
 </Request>
 XML;
 
-protected $xmltx1345=<<<XML
+    public $xmltx1345 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -444,7 +444,7 @@ protected $xmltx1345=<<<XML
 </Request>
 XML;
 
-protected $xmltx1348=<<<XML
+    public $xmltx1348 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -462,7 +462,7 @@ protected $xmltx1348=<<<XML
 </Request>
 XML;
 
-protected $xmltx1350=<<<XML
+    public $xmltx1350 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -475,7 +475,7 @@ protected $xmltx1350=<<<XML
 </Request>
 XML;
 
-protected $xmltx1361=<<<XML
+    public $xmltx1361 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -508,7 +508,7 @@ protected $xmltx1361=<<<XML
 </Request>
 XML;
 
-protected $xmltx1362=<<<XML
+    public $xmltx1362 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -519,7 +519,7 @@ protected $xmltx1362=<<<XML
 </Request>
 XML;
 
-protected $xmltx1363=<<<XML
+    public $xmltx1363 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -538,7 +538,7 @@ protected $xmltx1363=<<<XML
 </Request>
 XML;
 
-protected $xmltx1365=<<<XML
+    public $xmltx1365 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -571,7 +571,7 @@ protected $xmltx1365=<<<XML
 </Request>
 XML;
 
-protected $xmltx1366=<<<XML
+    public $xmltx1366 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -585,7 +585,7 @@ protected $xmltx1366=<<<XML
 </Request>
 XML;
 
-protected $xmltx1371=<<<XML
+    public $xmltx1371 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -602,7 +602,7 @@ protected $xmltx1371=<<<XML
 </Request>
 XML;
 
-protected $xmltx1372=<<<XML
+    public $xmltx1372 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -615,7 +615,7 @@ protected $xmltx1372=<<<XML
 </Request>
 XML;
 
-protected $xmltx1373=<<<XML
+    public $xmltx1373 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -632,7 +632,7 @@ protected $xmltx1373=<<<XML
 </Request>
 XML;
 
-protected $xmltx1374=<<<XML
+    public $xmltx1374 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -645,7 +645,7 @@ protected $xmltx1374=<<<XML
 </Request>
 XML;
 
-protected $xmltx1375=<<<XML
+    public $xmltx1375 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -662,7 +662,7 @@ protected $xmltx1375=<<<XML
 </Request>
 XML;
 
-protected $xmltx1376=<<<XML
+    public $xmltx1376 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -677,7 +677,7 @@ protected $xmltx1376=<<<XML
 </Request>
 XML;
 
-protected $xmltx1380=<<<XML
+    public $xmltx1380 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -696,7 +696,7 @@ protected $xmltx1380=<<<XML
 </Request>
 XML;
 
-protected $xmltx1382=<<<XML
+    public $xmltx1382 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -709,7 +709,7 @@ protected $xmltx1382=<<<XML
 </Request>
 XML;
 
-protected $xmltx1388=<<<XML
+    public $xmltx1388 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -728,7 +728,7 @@ protected $xmltx1388=<<<XML
 </Request>
 XML;
 
-protected $xmltx1390=<<<XML
+    public $xmltx1390 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -742,7 +742,7 @@ protected $xmltx1390=<<<XML
 </Request>
 XML;
 
-protected $xmltx1391=<<<XML
+    public $xmltx1391 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -764,7 +764,7 @@ protected $xmltx1391=<<<XML
 </Request>
 XML;
 
-protected $xmltx1392=<<<XML
+    public $xmltx1392 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -779,7 +779,7 @@ protected $xmltx1392=<<<XML
 </Request>
 XML;
 
-protected $xmltx1393=<<<XML
+    public $xmltx1393 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -801,7 +801,7 @@ protected $xmltx1393=<<<XML
 </Request>
 XML;
 
-protected $xmltx1394=<<<XML
+    public $xmltx1394 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -819,7 +819,7 @@ protected $xmltx1394=<<<XML
 </Request>
 XML;
 
-protected $xmltx1395=<<<XML
+    public $xmltx1395 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -832,7 +832,7 @@ protected $xmltx1395=<<<XML
 </Request>
 XML;
 
-protected $xmltx1396=<<<XML
+    public $xmltx1396 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -853,7 +853,7 @@ protected $xmltx1396=<<<XML
 </Request>
 XML;
 
-protected $xmltx1397=<<<XML
+    public $xmltx1397 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -866,7 +866,7 @@ protected $xmltx1397=<<<XML
 </Request>
 XML;
 
-protected $xmltx1510=<<<XML
+    public $xmltx1510 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -898,7 +898,7 @@ protected $xmltx1510=<<<XML
 </Request>
 XML;
 
-protected $xmltx1520=<<<XML
+    public $xmltx1520 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -911,7 +911,7 @@ protected $xmltx1520=<<<XML
 </Request>
 XML;
 
-protected $xmltx1550=<<<XML
+    public $xmltx1550 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -924,7 +924,7 @@ protected $xmltx1550=<<<XML
 </Request>
 XML;
 
-protected $xmltx1610=<<<XML
+    public $xmltx1610 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -959,7 +959,7 @@ protected $xmltx1610=<<<XML
 </Request>
 XML;
 
-protected $xmltx1620=<<<XML
+    public $xmltx1620 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -972,7 +972,7 @@ protected $xmltx1620=<<<XML
 </Request>
 XML;
 
-protected $xmltx1650=<<<XML
+    public $xmltx1650 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -985,7 +985,7 @@ protected $xmltx1650=<<<XML
 </Request>
 XML;
 
-protected $xmltx1711=<<<XML
+    public $xmltx1711 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
 	<Head> 
@@ -1006,7 +1006,7 @@ protected $xmltx1711=<<<XML
 </Request>
 XML;
 
-protected $xmltx1712=<<<XML
+    public $xmltx1712 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
 	<Head> 
@@ -1022,7 +1022,7 @@ protected $xmltx1712=<<<XML
 </Request>
 XML;
 
-protected $xmltx1713=<<<XML
+    public $xmltx1713 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
 	<Head> 
@@ -1035,7 +1035,7 @@ protected $xmltx1713=<<<XML
 </Request>
 XML;
 
-protected $xmltx1715=<<<XML
+    public $xmltx1715 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1061,7 +1061,7 @@ protected $xmltx1715=<<<XML
 </Request>
 XML;
 
-protected $xmltx1721=<<<XML
+    public $xmltx1721 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
 	<Head> 
@@ -1076,7 +1076,7 @@ protected $xmltx1721=<<<XML
 </Request>
 XML;
 
-protected $xmltx1722=<<<XML
+    public $xmltx1722 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
 	<Head> 
@@ -1094,7 +1094,7 @@ protected $xmltx1722=<<<XML
 </Request>
 XML;
 
-protected $xmltx1723=<<<XML
+    public $xmltx1723 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
 	<Head> 
@@ -1105,7 +1105,7 @@ protected $xmltx1723=<<<XML
 </Request>
 XML;
 
-protected $xmltx1731=<<<XML
+    public $xmltx1731 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
 	<Head> 
@@ -1121,7 +1121,7 @@ protected $xmltx1731=<<<XML
 </Request>
 XML;
 
-protected $xmltx1732=<<<XML
+    public $xmltx1732 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
 	<Head> 
@@ -1139,7 +1139,7 @@ protected $xmltx1732=<<<XML
 </Request>
 XML;
 
-protected $xmltx1733=<<<XML
+    public $xmltx1733 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
 	<Head> 
@@ -1150,7 +1150,7 @@ protected $xmltx1733=<<<XML
 </Request>
 XML;
 
-protected $xmltx1741=<<<XML
+    public $xmltx1741 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -1175,7 +1175,7 @@ protected $xmltx1741=<<<XML
 </Request>
 XML;
 
-protected $xmltx1810=<<<XML
+    public $xmltx1810 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -1188,7 +1188,7 @@ protected $xmltx1810=<<<XML
 </Request>
 XML;
 
-protected $xmltx1811=<<<XML
+    public $xmltx1811 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -1203,7 +1203,7 @@ protected $xmltx1811=<<<XML
 </Request>
 XML;
 
-protected $xmltx1820=<<<XML
+    public $xmltx1820 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -1216,7 +1216,7 @@ protected $xmltx1820=<<<XML
 </Request>
 XML;
 
-protected $xmltx1830=<<<XML
+    public $xmltx1830 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -1229,7 +1229,7 @@ protected $xmltx1830=<<<XML
 </Request>
 XML;
 
-protected $xmltx1840=<<<XML
+    public $xmltx1840 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -1244,7 +1244,7 @@ protected $xmltx1840=<<<XML
 </Request>
 XML;
 
-protected $xmltx1818=<<<XML
+    public $xmltx1818 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -1257,7 +1257,7 @@ protected $xmltx1818=<<<XML
 </Request>
 XML;
 
-protected $xmltx1910=<<<XML
+    public $xmltx1910 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1308,7 +1308,7 @@ protected $xmltx1910=<<<XML
 </Request>
 XML;
 
-protected $xmltx1920=<<<XML
+    public $xmltx1920 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -1321,7 +1321,7 @@ protected $xmltx1920=<<<XML
 </Request>
 XML;
 
-protected $xmltx1930=<<<XML
+    public $xmltx1930 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -1335,7 +1335,7 @@ protected $xmltx1930=<<<XML
 </Request>
 XML;
 
-protected $xmltx1950=<<<XML
+    public $xmltx1950 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -1348,7 +1348,7 @@ protected $xmltx1950=<<<XML
 </Request>
 XML;
 
-protected $xmltx2011=<<<XML
+    public $xmltx2011 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -1378,7 +1378,7 @@ protected $xmltx2011=<<<XML
 </Request>
 XML;
 
-protected $xmltx2018=<<<XML
+    public $xmltx2018 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -1396,7 +1396,7 @@ protected $xmltx2018=<<<XML
 </Request>
 XML;
 
-protected $xmltx2020=<<<XML
+    public $xmltx2020 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head>
@@ -1407,7 +1407,7 @@ protected $xmltx2020=<<<XML
 </Request>
 XML;
 
-protected $xmltx2310=<<<XML
+    public $xmltx2310 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 	<Head>
@@ -1431,7 +1431,7 @@ protected $xmltx2310=<<<XML
 </Request>
 XML;
 
-protected $xmltx2320=<<<XML
+    public $xmltx2320 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1446,7 +1446,7 @@ protected $xmltx2320=<<<XML
 </Request>
 XML;
 
-protected $xmltx2330=<<<XML
+    public $xmltx2330 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1461,7 +1461,7 @@ protected $xmltx2330=<<<XML
 </Request>
 XML;
 
-protected $xmltx2331=<<<XML
+    public $xmltx2331 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1476,7 +1476,7 @@ protected $xmltx2331=<<<XML
 </Request>
 XML;
 
-protected $xmltx2340=<<<XML
+    public $xmltx2340 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1494,7 +1494,7 @@ protected $xmltx2340=<<<XML
 </Request>
 XML;
 
-protected $xmltx2341=<<<XML
+    public $xmltx2341 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1512,7 +1512,7 @@ protected $xmltx2341=<<<XML
 </Request>
 XML;
 
-protected $xmltx2342=<<<XML
+    public $xmltx2342 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1526,7 +1526,7 @@ protected $xmltx2342=<<<XML
 </Request>
 XML;
 
-protected $xmltx2351=<<<XML
+    public $xmltx2351 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1546,7 +1546,7 @@ protected $xmltx2351=<<<XML
 </Request>
 XML;
 
-protected $xmltx2352=<<<XML
+    public $xmltx2352 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1560,7 +1560,7 @@ protected $xmltx2352=<<<XML
 </Request>
 XML;
 
-protected $xmltx2501=<<<XML
+    public $xmltx2501 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1582,7 +1582,7 @@ protected $xmltx2501=<<<XML
 </Request>
 XML;
 
-protected $xmltx2502=<<<XML
+    public $xmltx2502 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1595,7 +1595,7 @@ protected $xmltx2502=<<<XML
 </Request>
 XML;
 
-protected $xmltx2503=<<<XML
+    public $xmltx2503 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1609,7 +1609,7 @@ protected $xmltx2503=<<<XML
 </Request>
 XML;
 
-protected $xmltx2511=<<<XML
+    public $xmltx2511 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1626,7 +1626,7 @@ protected $xmltx2511=<<<XML
 </Request>
 XML;
 
-protected $xmltx2512=<<<XML
+    public $xmltx2512 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1639,7 +1639,7 @@ protected $xmltx2512=<<<XML
 </Request>
 XML;
 
-protected $xmltx2521=<<<XML
+    public $xmltx2521 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1655,7 +1655,7 @@ protected $xmltx2521=<<<XML
 </Request>
 XML;
 
-protected $xmltx2522=<<<XML
+    public $xmltx2522 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1668,7 +1668,7 @@ protected $xmltx2522=<<<XML
 </Request>
 XML;
 
-protected $xmltx2531=<<<XML
+    public $xmltx2531 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1690,7 +1690,7 @@ protected $xmltx2531=<<<XML
 </Request>
 XML;
 
-protected $xmltx2532=<<<XML
+    public $xmltx2532 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1704,7 +1704,7 @@ protected $xmltx2532=<<<XML
 </Request>
 XML;
 
-protected $xmltx2541=<<<XML
+    public $xmltx2541 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1721,7 +1721,7 @@ protected $xmltx2541=<<<XML
 </Request>
 XML;
 
-protected $xmltx2542=<<<XML
+    public $xmltx2542 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1735,7 +1735,7 @@ protected $xmltx2542=<<<XML
 </Request>
 XML;
 
-protected $xmltx2551=<<<XML
+    public $xmltx2551 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1755,7 +1755,7 @@ protected $xmltx2551=<<<XML
 </Request>
 XML;
 
-protected $xmltx2552=<<<XML
+    public $xmltx2552 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1774,7 +1774,7 @@ protected $xmltx2552=<<<XML
 </Request>
 XML;
 
-protected $xmltx2553=<<<XML
+    public $xmltx2553 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1788,7 +1788,7 @@ protected $xmltx2553=<<<XML
 </Request>
 XML;
 
-protected $xmltx2561=<<<XML
+    public $xmltx2561 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1804,7 +1804,7 @@ protected $xmltx2561=<<<XML
 </Request>
 XML;
 
-protected $xmltx2562=<<<XML
+    public $xmltx2562 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1817,7 +1817,7 @@ protected $xmltx2562=<<<XML
 </Request>
 XML;
 
-protected $xmltx2568=<<<XML
+    public $xmltx2568 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1837,7 +1837,7 @@ protected $xmltx2568=<<<XML
 </Request>
 XML;
 
-protected $xmltx3111=<<<XML
+    public $xmltx3111 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1875,7 +1875,7 @@ protected $xmltx3111=<<<XML
 </Request>
 XML;
 
-protected $xmltx3112=<<<XML
+    public $xmltx3112 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1912,7 +1912,7 @@ protected $xmltx3112=<<<XML
 </Request>
 XML;
 
-protected $xmltx3116=<<<XML
+    public $xmltx3116 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1925,7 +1925,7 @@ protected $xmltx3116=<<<XML
 </Request>
 XML;
 
-protected $xmltx3118=<<<XML
+    public $xmltx3118 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1944,7 +1944,7 @@ protected $xmltx3118=<<<XML
 </Request>
 XML;
 
-protected $xmltx3119=<<<XML
+    public $xmltx3119 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1967,7 +1967,7 @@ protected $xmltx3119=<<<XML
 </Request>
 XML;
 
-protected $xmltx3120=<<<XML
+    public $xmltx3120 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -1982,7 +1982,7 @@ protected $xmltx3120=<<<XML
 </Request>
 XML;
 
-protected $xmltx3131=<<<XML
+    public $xmltx3131 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2010,7 +2010,7 @@ protected $xmltx3131=<<<XML
 </Request>
 XML;
 
-protected $xmltx3136=<<<XML
+    public $xmltx3136 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2023,7 +2023,7 @@ protected $xmltx3136=<<<XML
 </Request>
 XML;
 
-protected $xmltx3137=<<<XML
+    public $xmltx3137 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2052,7 +2052,7 @@ protected $xmltx3137=<<<XML
 </Request>
 XML;
 
-protected $xmltx3138=<<<XML
+    public $xmltx3138 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2065,7 +2065,7 @@ protected $xmltx3138=<<<XML
 </Request>
 XML;
 
-protected $xmltx3141=<<<XML
+    public $xmltx3141 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2092,7 +2092,7 @@ protected $xmltx3141=<<<XML
 </Request>
 XML;
 
-protected $xmltx3146=<<<XML
+    public $xmltx3146 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2105,7 +2105,7 @@ protected $xmltx3146=<<<XML
 </Request>
 XML;
 
-protected $xmltx3151=<<<XML
+    public $xmltx3151 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2144,7 +2144,7 @@ protected $xmltx3151=<<<XML
 </Request>
 XML;
 
-protected $xmltx3156=<<<XML
+    public $xmltx3156 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2157,7 +2157,7 @@ protected $xmltx3156=<<<XML
 </Request>
 XML;
 
-protected $xmltx3161=<<<XML
+    public $xmltx3161 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2191,7 +2191,7 @@ protected $xmltx3161=<<<XML
 </Request>
 XML;
 
-protected $xmltx3162=<<<XML
+    public $xmltx3162 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2204,7 +2204,7 @@ protected $xmltx3162=<<<XML
 </Request>
 XML;
 
-protected $xmltx3211=<<<XML
+    public $xmltx3211 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 	<Head>
@@ -2243,7 +2243,7 @@ protected $xmltx3211=<<<XML
 </Request>
 XML;
 
-protected $xmltx3212=<<<XML
+    public $xmltx3212 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2280,7 +2280,7 @@ protected $xmltx3212=<<<XML
 </Request>
 XML;
 
-protected $xmltx3216=<<<XML
+    public $xmltx3216 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -2293,7 +2293,7 @@ protected $xmltx3216=<<<XML
 </Request>
 XML;
 
-protected $xmltx3218=<<<XML
+    public $xmltx3218 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -2310,7 +2310,7 @@ protected $xmltx3218=<<<XML
 </Request>
 XML;
 
-protected $xmltx3219=<<<XML
+    public $xmltx3219 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2331,7 +2331,7 @@ protected $xmltx3219=<<<XML
 </Request>
 XML;
 
-protected $xmltx3231=<<<XML
+    public $xmltx3231 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -2359,7 +2359,7 @@ protected $xmltx3231=<<<XML
 </Request>
 XML;
 
-protected $xmltx3236=<<<XML
+    public $xmltx3236 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -2372,7 +2372,7 @@ protected $xmltx3236=<<<XML
 </Request>
 XML;
 
-protected $xmltx3237=<<<XML
+    public $xmltx3237 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2401,7 +2401,7 @@ protected $xmltx3237=<<<XML
 </Request>
 XML;
 
-protected $xmltx3238=<<<XML
+    public $xmltx3238 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2414,7 +2414,7 @@ protected $xmltx3238=<<<XML
 </Request>
 XML;
 
-protected $xmltx3241=<<<XML
+    public $xmltx3241 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -2441,7 +2441,7 @@ protected $xmltx3241=<<<XML
 </Request>
 XML;
 
-protected $xmltx3246=<<<XML
+    public $xmltx3246 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -2454,7 +2454,7 @@ protected $xmltx3246=<<<XML
 </Request>
 XML;
 
-protected $xmltx3251=<<<XML
+    public $xmltx3251 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2493,7 +2493,7 @@ protected $xmltx3251=<<<XML
 </Request>
 XML;
 
-protected $xmltx3256=<<<XML
+    public $xmltx3256 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2506,7 +2506,7 @@ protected $xmltx3256=<<<XML
 </Request>
 XML;
 
-protected $xmltx3261=<<<XML
+    public $xmltx3261 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2540,7 +2540,7 @@ protected $xmltx3261=<<<XML
 </Request>
 XML;
 
-protected $xmltx3262=<<<XML
+    public $xmltx3262 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2553,7 +2553,7 @@ protected $xmltx3262=<<<XML
 </Request>
 XML;
 
-protected $xmltx3291=<<<XML
+    public $xmltx3291 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2569,7 +2569,7 @@ protected $xmltx3291=<<<XML
 </Request>
 XML;
 
-protected $xmltx3292=<<<XML
+    public $xmltx3292 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2582,7 +2582,7 @@ protected $xmltx3292=<<<XML
 </Request>
 XML;
 
-protected $xmltx3310=<<<XML
+    public $xmltx3310 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2606,7 +2606,7 @@ protected $xmltx3310=<<<XML
 </Request>
 XML;
 
-protected $xmltx3312=<<<XML
+    public $xmltx3312 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2619,7 +2619,7 @@ protected $xmltx3312=<<<XML
 </Request>
 XML;
 
-protected $xmltx3315=<<<XML
+    public $xmltx3315 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2632,7 +2632,7 @@ protected $xmltx3315=<<<XML
 </Request>
 XML;
 
-protected $xmltx3601=<<<XML
+    public $xmltx3601 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2661,7 +2661,7 @@ protected $xmltx3601=<<<XML
 </Request>
 XML;
 
-protected $xmltx3602=<<<XML
+    public $xmltx3602 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2674,7 +2674,7 @@ protected $xmltx3602=<<<XML
 </Request>
 XML;
 
-protected $xmltx3611=<<<XML
+    public $xmltx3611 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2691,7 +2691,7 @@ protected $xmltx3611=<<<XML
 </Request>
 XML;
 
-protected $xmltx3612=<<<XML
+    public $xmltx3612 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2704,7 +2704,7 @@ protected $xmltx3612=<<<XML
 </Request>
 XML;
 
-protected $xmltx3618=<<<XML
+    public $xmltx3618 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2725,7 +2725,7 @@ protected $xmltx3618=<<<XML
 </Request>
 XML;
 
-protected $xmltx3631=<<<XML
+    public $xmltx3631 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2744,7 +2744,7 @@ protected $xmltx3631=<<<XML
 </Request>
 XML;
 
-protected $xmltx3632=<<<XML
+    public $xmltx3632 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2757,7 +2757,7 @@ protected $xmltx3632=<<<XML
 </Request>
 XML;
 
-protected $xmltx3641=<<<XML
+    public $xmltx3641 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2773,7 +2773,7 @@ protected $xmltx3641=<<<XML
 </Request>
 XML;
 
-protected $xmltx3642=<<<XML
+    public $xmltx3642 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2787,7 +2787,7 @@ protected $xmltx3642=<<<XML
 </Request>
 XML;
 
-protected $xmltx3643=<<<XML
+    public $xmltx3643 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2804,7 +2804,7 @@ protected $xmltx3643=<<<XML
 </Request>
 XML;
 
-protected $xmltx3644=<<<XML
+    public $xmltx3644 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2818,7 +2818,7 @@ protected $xmltx3644=<<<XML
 </Request>
 XML;
 
-protected $xmltx4011=<<<XML
+    public $xmltx4011 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2838,7 +2838,7 @@ protected $xmltx4011=<<<XML
 </Request>
 XML;
 
-protected $xmltx4018=<<<XML
+    public $xmltx4018 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2854,7 +2854,7 @@ protected $xmltx4018=<<<XML
 </Request>
 XML;
 
-protected $xmltx4201=<<<XML
+    public $xmltx4201 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2872,7 +2872,7 @@ protected $xmltx4201=<<<XML
 </Request>
 XML;
 
-protected $xmltx4202=<<<XML
+    public $xmltx4202 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2885,7 +2885,7 @@ protected $xmltx4202=<<<XML
 </Request>
 XML;
 
-protected $xmltx4203=<<<XML
+    public $xmltx4203 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2905,7 +2905,7 @@ protected $xmltx4203=<<<XML
 </Request>
 XML;
 
-protected $xmltx4204=<<<XML
+    public $xmltx4204 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2923,7 +2923,7 @@ protected $xmltx4204=<<<XML
 </Request>
 XML;
 
-protected $xmltx4210=<<<XML
+    public $xmltx4210 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2937,7 +2937,7 @@ protected $xmltx4210=<<<XML
 </Request>
 XML;
 
-protected $xmltx4211=<<<XML
+    public $xmltx4211 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2952,7 +2952,7 @@ protected $xmltx4211=<<<XML
 </Request>
 XML;
 
-protected $xmltx4212=<<<XML
+    public $xmltx4212 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2967,7 +2967,7 @@ protected $xmltx4212=<<<XML
 </Request>
 XML;
 
-protected $xmltx4218=<<<XML
+    public $xmltx4218 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2984,7 +2984,7 @@ protected $xmltx4218=<<<XML
 </Request>
 XML;
 
-protected $xmltx4220=<<<XML
+    public $xmltx4220 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -2998,7 +2998,7 @@ protected $xmltx4220=<<<XML
 </Request>
 XML;
 
-protected $xmltx4221=<<<XML
+    public $xmltx4221 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3013,7 +3013,7 @@ protected $xmltx4221=<<<XML
 </Request>
 XML;
 
-protected $xmltx4222=<<<XML
+    public $xmltx4222 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3031,7 +3031,7 @@ protected $xmltx4222=<<<XML
 </Request>
 XML;
 
-protected $xmltx4228=<<<XML
+    public $xmltx4228 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3048,7 +3048,7 @@ protected $xmltx4228=<<<XML
 </Request>
 XML;
 
-protected $xmltx4231=<<<XML
+    public $xmltx4231 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3065,7 +3065,7 @@ protected $xmltx4231=<<<XML
 </Request>
 XML;
 
-protected $xmltx4232=<<<XML
+    public $xmltx4232 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3079,7 +3079,7 @@ protected $xmltx4232=<<<XML
 </Request>
 XML;
 
-protected $xmltx4233=<<<XML
+    public $xmltx4233 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3100,7 +3100,7 @@ protected $xmltx4233=<<<XML
 </Request>
 XML;
 
-protected $xmltx4234=<<<XML
+    public $xmltx4234 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3117,7 +3117,7 @@ protected $xmltx4234=<<<XML
 </Request>
 XML;
 
-protected $xmltx4235=<<<XML
+    public $xmltx4235 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3130,7 +3130,7 @@ protected $xmltx4235=<<<XML
 </Request>
 XML;
 
-protected $xmltx4237=<<<XML
+    public $xmltx4237 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3143,7 +3143,7 @@ protected $xmltx4237=<<<XML
 </Request>
 XML;
 
-protected $xmltx4238=<<<XML
+    public $xmltx4238 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3158,7 +3158,7 @@ protected $xmltx4238=<<<XML
 </Request>
 XML;
 
-protected $xmltx4241=<<<XML
+    public $xmltx4241 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3172,7 +3172,7 @@ protected $xmltx4241=<<<XML
 </Request>
 XML;
 
-protected $xmltx4242=<<<XML
+    public $xmltx4242 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3186,7 +3186,7 @@ protected $xmltx4242=<<<XML
 </Request>
 XML;
 
-protected $xmltx4243=<<<XML
+    public $xmltx4243 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3203,7 +3203,7 @@ protected $xmltx4243=<<<XML
 </Request>
 XML;
 
-protected $xmltx4244=<<<XML
+    public $xmltx4244 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3216,7 +3216,7 @@ protected $xmltx4244=<<<XML
 </Request>
 XML;
 
-protected $xmltx4245=<<<XML
+    public $xmltx4245 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3231,7 +3231,7 @@ protected $xmltx4245=<<<XML
 </Request>
 XML;
 
-protected $xmltx4246=<<<XML
+    public $xmltx4246 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3246,7 +3246,7 @@ protected $xmltx4246=<<<XML
 </Request>
 XML;
 
-protected $xmltx4247=<<<XML
+    public $xmltx4247 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3262,7 +3262,7 @@ protected $xmltx4247=<<<XML
 </Request>
 XML;
 
-protected $xmltx4251=<<<XML
+    public $xmltx4251 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3278,7 +3278,7 @@ protected $xmltx4251=<<<XML
 </Request>
 XML;
 
-protected $xmltx4252=<<<XML
+    public $xmltx4252 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3291,7 +3291,7 @@ protected $xmltx4252=<<<XML
 </Request>
 XML;
 
-protected $xmltx4253=<<<XML
+    public $xmltx4253 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3307,7 +3307,7 @@ protected $xmltx4253=<<<XML
 </Request>
 XML;
 
-protected $xmltx4254=<<<XML
+    public $xmltx4254 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3323,7 +3323,7 @@ protected $xmltx4254=<<<XML
 </Request>
 XML;
 
-protected $xmltx4255=<<<XML
+    public $xmltx4255 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3340,7 +3340,7 @@ protected $xmltx4255=<<<XML
 </Request>
 XML;
 
-protected $xmltx4256=<<<XML
+    public $xmltx4256 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3353,7 +3353,7 @@ protected $xmltx4256=<<<XML
 </Request>
 XML;
 
-protected $xmltx4257=<<<XML
+    public $xmltx4257 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3373,7 +3373,7 @@ protected $xmltx4257=<<<XML
 </Request>
 XML;
 
-protected $xmltx4258=<<<XML
+    public $xmltx4258 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3390,7 +3390,7 @@ protected $xmltx4258=<<<XML
 </Request>
 XML;
 
-protected $xmltx4261=<<<XML
+    public $xmltx4261 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3405,7 +3405,7 @@ protected $xmltx4261=<<<XML
 </Request>
 XML;
 
-protected $xmltx4262=<<<XML
+    public $xmltx4262 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3418,7 +3418,7 @@ protected $xmltx4262=<<<XML
 </Request>
 XML;
 
-protected $xmltx4263=<<<XML
+    public $xmltx4263 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3436,7 +3436,7 @@ protected $xmltx4263=<<<XML
 </Request>
 XML;
 
-protected $xmltx4264=<<<XML
+    public $xmltx4264 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3449,7 +3449,7 @@ protected $xmltx4264=<<<XML
 </Request>
 XML;
 
-protected $xmltx4271=<<<XML
+    public $xmltx4271 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3465,7 +3465,7 @@ protected $xmltx4271=<<<XML
 </Request>
 XML;
 
-protected $xmltx4272=<<<XML
+    public $xmltx4272 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3481,7 +3481,7 @@ protected $xmltx4272=<<<XML
 </Request>
 XML;
 
-protected $xmltx4273=<<<XML
+    public $xmltx4273 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3494,7 +3494,7 @@ protected $xmltx4273=<<<XML
 </Request>
 XML;
 
-protected $xmltx4276=<<<XML
+    public $xmltx4276 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3507,7 +3507,7 @@ protected $xmltx4276=<<<XML
 </Request>
 XML;
 
-protected $xmltx4278=<<<XML
+    public $xmltx4278 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3525,7 +3525,7 @@ protected $xmltx4278=<<<XML
 </Request>
 XML;
 
-protected $xmltx4311=<<<XML
+    public $xmltx4311 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3545,7 +3545,7 @@ protected $xmltx4311=<<<XML
 </Request>
 XML;
 
-protected $xmltx4312=<<<XML
+    public $xmltx4312 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3561,7 +3561,7 @@ protected $xmltx4312=<<<XML
 </Request>
 XML;
 
-protected $xmltx4316=<<<XML
+    public $xmltx4316 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3577,7 +3577,7 @@ protected $xmltx4316=<<<XML
 </Request>
 XML;
 
-protected $xmltx4318=<<<XML
+    public $xmltx4318 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3593,7 +3593,7 @@ protected $xmltx4318=<<<XML
 </Request>
 XML;
 
-protected $xmltx4320=<<<XML
+    public $xmltx4320 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3608,7 +3608,7 @@ protected $xmltx4320=<<<XML
 </Request>
 XML;
 
-protected $xmltx4321=<<<XML
+    public $xmltx4321 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3621,7 +3621,7 @@ protected $xmltx4321=<<<XML
 </Request>
 XML;
 
-protected $xmltx4322=<<<XML
+    public $xmltx4322 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3636,7 +3636,7 @@ protected $xmltx4322=<<<XML
 </Request>
 XML;
 
-protected $xmltx4328=<<<XML
+    public $xmltx4328 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3649,7 +3649,7 @@ protected $xmltx4328=<<<XML
 </Request>
 XML;
 
-protected $xmltx4331=<<<XML
+    public $xmltx4331 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3665,7 +3665,7 @@ protected $xmltx4331=<<<XML
 </Request>
 XML;
 
-protected $xmltx4332=<<<XML
+    public $xmltx4332 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3681,7 +3681,7 @@ protected $xmltx4332=<<<XML
 </Request>
 XML;
 
-protected $xmltx4333=<<<XML
+    public $xmltx4333 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3694,7 +3694,7 @@ protected $xmltx4333=<<<XML
 </Request>
 XML;
 
-protected $xmltx4336=<<<XML
+    public $xmltx4336 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3707,7 +3707,7 @@ protected $xmltx4336=<<<XML
 </Request>
 XML;
 
-protected $xmltx4338=<<<XML
+    public $xmltx4338 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3722,7 +3722,7 @@ protected $xmltx4338=<<<XML
 </Request>
 XML;
 
-protected $xmltx4510=<<<XML
+    public $xmltx4510 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3736,7 +3736,7 @@ protected $xmltx4510=<<<XML
 </Request>
 XML;
 
-protected $xmltx4512=<<<XML
+    public $xmltx4512 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3752,7 +3752,7 @@ protected $xmltx4512=<<<XML
 </Request>
 XML;
 
-protected $xmltx4520=<<<XML
+    public $xmltx4520 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3770,7 +3770,7 @@ protected $xmltx4520=<<<XML
 </Request>
 XML;
 
-protected $xmltx4522=<<<XML
+    public $xmltx4522 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3789,7 +3789,7 @@ protected $xmltx4522=<<<XML
 </Request>
 XML;
 
-protected $xmltx4524=<<<XML
+    public $xmltx4524 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3804,7 +3804,7 @@ protected $xmltx4524=<<<XML
 </Request>
 XML;
 
-protected $xmltx4526=<<<XML
+    public $xmltx4526 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3831,7 +3831,7 @@ protected $xmltx4526=<<<XML
 </Request>
 XML;
 
-protected $xmltx4528=<<<XML
+    public $xmltx4528 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3844,7 +3844,7 @@ protected $xmltx4528=<<<XML
 </Request>
 XML;
 
-protected $xmltx4530=<<<XML
+    public $xmltx4530 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3870,7 +3870,7 @@ protected $xmltx4530=<<<XML
 </Request>
 XML;
 
-protected $xmltx4532=<<<XML
+    public $xmltx4532 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3883,7 +3883,7 @@ protected $xmltx4532=<<<XML
 </Request>
 XML;
 
-protected $xmltx4534=<<<XML
+    public $xmltx4534 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3913,7 +3913,7 @@ protected $xmltx4534=<<<XML
 </Request>
 XML;
 
-protected $xmltx4536=<<<XML
+    public $xmltx4536 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3943,7 +3943,7 @@ protected $xmltx4536=<<<XML
 </Request>
 XML;
 
-protected $xmltx4538=<<<XML
+    public $xmltx4538 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -3957,7 +3957,7 @@ protected $xmltx4538=<<<XML
 </Request>
 XML;
 
-protected $xmltx4540=<<<XML
+    public $xmltx4540 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3976,7 +3976,7 @@ protected $xmltx4540=<<<XML
 </Request>
 XML;
 
-protected $xmltx4542=<<<XML
+    public $xmltx4542 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0"> 
   <Head> 
@@ -3989,7 +3989,7 @@ protected $xmltx4542=<<<XML
 </Request>
 XML;
 
-protected $xmltx4544=<<<XML
+    public $xmltx4544 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4016,7 +4016,7 @@ protected $xmltx4544=<<<XML
 </Request>
 XML;
 
-protected $xmltx4546=<<<XML
+    public $xmltx4546 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4030,7 +4030,7 @@ protected $xmltx4546=<<<XML
 </Request>
 XML;
 
-protected $xmltx5111=<<<XML
+    public $xmltx5111 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4061,7 +4061,7 @@ protected $xmltx5111=<<<XML
 </Request>
 XML;
 
-protected $xmltx5116=<<<XML
+    public $xmltx5116 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4074,7 +4074,7 @@ protected $xmltx5116=<<<XML
 </Request>
 XML;
 
-protected $xmltx5121=<<<XML
+    public $xmltx5121 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4116,7 +4116,7 @@ protected $xmltx5121=<<<XML
 </Request>
 XML;
 
-protected $xmltx5126=<<<XML
+    public $xmltx5126 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4129,7 +4129,7 @@ protected $xmltx5126=<<<XML
 </Request>
 XML;
 
-protected $xmltx5128=<<<XML
+    public $xmltx5128 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4150,7 +4150,7 @@ protected $xmltx5128=<<<XML
 </Request>
 XML;
 
-protected $xmltx6101=<<<XML
+    public $xmltx6101 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4167,7 +4167,7 @@ protected $xmltx6101=<<<XML
 </Request>
 XML;
 
-protected $xmltx6102=<<<XML
+    public $xmltx6102 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4180,7 +4180,7 @@ protected $xmltx6102=<<<XML
 </Request>
 XML;
 
-protected $xmltx6111=<<<XML
+    public $xmltx6111 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4198,7 +4198,7 @@ protected $xmltx6111=<<<XML
 </Request>
 XML;
 
-protected $xmltx6112=<<<XML
+    public $xmltx6112 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4211,7 +4211,7 @@ protected $xmltx6112=<<<XML
 </Request>
 XML;
 
-protected $xmltx6116=<<<XML
+    public $xmltx6116 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4225,7 +4225,7 @@ protected $xmltx6116=<<<XML
 </Request>
 XML;
 
-protected $xmltx6121=<<<XML
+    public $xmltx6121 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4244,7 +4244,7 @@ protected $xmltx6121=<<<XML
 </Request>
 XML;
 
-protected $xmltx6122=<<<XML
+    public $xmltx6122 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4257,7 +4257,7 @@ protected $xmltx6122=<<<XML
 </Request>
 XML;
 
-protected $xmltx6123=<<<XML
+    public $xmltx6123 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4275,7 +4275,7 @@ protected $xmltx6123=<<<XML
 </Request>
 XML;
 
-protected $xmltx6124=<<<XML
+    public $xmltx6124 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4294,7 +4294,7 @@ protected $xmltx6124=<<<XML
 </Request>
 XML;
 
-protected $xmltx6125=<<<XML
+    public $xmltx6125 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4307,7 +4307,7 @@ protected $xmltx6125=<<<XML
 </Request>
 XML;
 
-protected $xmltx6126=<<<XML
+    public $xmltx6126 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4326,7 +4326,7 @@ protected $xmltx6126=<<<XML
 </Request>
 XML;
 
-protected $xmltx6127=<<<XML
+    public $xmltx6127 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4339,7 +4339,7 @@ protected $xmltx6127=<<<XML
 </Request>
 XML;
 
-protected $xmltx6131=<<<XML
+    public $xmltx6131 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4352,7 +4352,7 @@ protected $xmltx6131=<<<XML
 </Request>
 XML;
 
-protected $xmltx6132=<<<XML
+    public $xmltx6132 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4365,7 +4365,7 @@ protected $xmltx6132=<<<XML
 </Request>
 XML;
 
-protected $xmltx6133=<<<XML
+    public $xmltx6133 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4380,7 +4380,7 @@ protected $xmltx6133=<<<XML
 </Request>
 XML;
 
-protected $xmltx6134=<<<XML
+    public $xmltx6134 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4395,7 +4395,7 @@ protected $xmltx6134=<<<XML
 </Request>
 XML;
 
-protected $xmltx6135=<<<XML
+    public $xmltx6135 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4407,7 +4407,7 @@ protected $xmltx6135=<<<XML
 </Request>
 XML;
 
-protected $xmltx7611=<<<XML
+    public $xmltx7611 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4432,7 +4432,7 @@ protected $xmltx7611=<<<XML
 </Request>
 XML;
 
-protected $xmltx7618=<<<XML
+    public $xmltx7618 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4452,7 +4452,7 @@ protected $xmltx7618=<<<XML
 </Request>
 XML;
 
-protected $xmltx7620=<<<XML
+    public $xmltx7620 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4465,7 +4465,7 @@ protected $xmltx7620=<<<XML
 </Request>
 XML;
 
-protected $xmltx7621=<<<XML
+    public $xmltx7621 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4478,7 +4478,7 @@ protected $xmltx7621=<<<XML
 </Request>
 XML;
 
-protected $xmltx8000=<<<XML
+    public $xmltx8000 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>
@@ -4488,7 +4488,7 @@ protected $xmltx8000=<<<XML
 </Request>
 XML;
 
-protected $xmltx9999=<<<XML
+    public $xmltx9999 = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <Request version="2.0">
 <Head>

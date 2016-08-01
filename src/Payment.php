@@ -8,17 +8,31 @@
 namespace Cicc;
 use SimpleXMLElement;
 
-class PaymentService extends Service
+class Payment 
 {
     private $CICC_REAL;
+    private $xmltx;
     function __construct()
     {
-        if(env('CICC_REAL') == 1){
-            $this->CICC_REAL = config('services')["cicc_url_real"];
-        }else{
-            $this->CICC_REAL = config('services')["cicc_url_test"];
-        }
-        print_r($this->CICC_REAL);
+        $this->xmltx = new Xmltx();
+    }
+
+    /**
+    'cicc_url_real'=>['PAYURL'=>"https://www.china-clearing.com/Gateway/InterfaceI",
+    'TXURL'=>"https://www.china-clearing.com/Gateway/InterfaceII",
+    'PAYURL2'=>"https://payment.china-clearing.com/Gateway4PaymentUser/InterfaceI",
+    'TXURL2'=>"https://payment.china-clearing.com/Gateway4PaymentUser/InterfaceII",
+    'PFX_PATH'=>public_path("static".DIRECTORY_SEPARATOR."CiccPay".DIRECTORY_SEPARATOR."config".DIRECTORY_SEPARATOR."pri_real.pfx"),
+    'PFX_PASS'=>"123456",
+    'CER_PATH'=>public_path("static".DIRECTORY_SEPARATOR."CiccPay".DIRECTORY_SEPARATOR."config".DIRECTORY_SEPARATOR."pub_real.cer"),
+    'InstitutionID'=>"002184" //机构代码 商户号
+    ],
+     *
+     * @author wucheng
+     * @param $config
+     */
+    public function config($config){
+        $this->CICC_REAL = $config;
     }
 
     // 签名函数
@@ -154,7 +168,7 @@ class PaymentService extends Service
         $notificationURL = $post["notification_url"];
         $payees = $post["payees"];
 
-        $simpleXML= new SimpleXMLElement($this->xmltx1312);
+        $simpleXML= new SimpleXMLElement($this->xmltx->xmltx1312);
 
         $simpleXML->Body->InstitutionID=$this->CICC_REAL['InstitutionID'];
         $simpleXML->Body->OrderNo=$orderNo;
@@ -207,7 +221,7 @@ class PaymentService extends Service
      * @return array
      */
     public function tx1320($institution_id,$payment_no){
-        $simpleXML= new SimpleXMLElement($this->xmltx1320);
+        $simpleXML= new SimpleXMLElement($this->xmltx->xmltx1320);
         $simpleXML->Body->InstitutionID=$institution_id;
         $simpleXML->Body->PaymentNo=$payment_no;
 

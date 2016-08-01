@@ -11,7 +11,15 @@ namespace Cicc;
 
 class Cicc
 {
-    public static function tx1312(){
+    private $payment;
+    public function setConfig($config){
+        $this->payment = new Payment();
+        $this->payment->config($config);
+    }
+
+    public function tx1312(){
         exit("tx1312 demo");
     }
+
+
 }
