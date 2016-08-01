@@ -12,6 +12,6 @@ namespace Cicc;
 class Cicc
 {
     public static function tx1312(){
-        exit("tx1312");
+        exit("tx1312 demo");
     }
 }
