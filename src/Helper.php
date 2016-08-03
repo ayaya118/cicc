@@ -24,18 +24,11 @@ class Helper
         return $output;
     }
 
-    public static function getTxNo16(){
-        ini_set('date.timezone','Asia/Shanghai');
-        $timePrefix = date("ymdH"); //yyMMddHH
-        $randomString = genRandomString(8);
-        return $timePrefix.$randomString;
-    }
-
 
     public static function getTxNo20(){
         ini_set('date.timezone','Asia/Shanghai');
-        $timePrefix = date("ymdHi"); //yyMMddHHmm
-        $randomString = genRandomString(10);
+        $timePrefix = date("ymdHi"); 
+        $randomString = Helper::genRandomString(10);
         return $timePrefix.$randomString;
     }
 }

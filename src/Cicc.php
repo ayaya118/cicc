@@ -15,10 +15,12 @@ class Cicc
      * @var Payment
      */
     private $payment;
+    
     public function setConfig($config){
         $this->payment = new Payment();
         $this->payment->config($config);
     }
+
 
     /**
      * 执行tx1312支付

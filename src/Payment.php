@@ -160,13 +160,13 @@ class Payment
         $orderNo = $post["order_no"];
         $paymentNo = $post["payment_no"];
         $amount = intval($post["amount"]);
-        $payerID = $post["payer_id"];
+        $notificationURL = $post["notification_url"];
+        /*$payerID = $post["payer_id"];
         $payerName = $post["payer_name"];
         $usage = $post["usage"];
         $remark = $post["remark"];
         $note = $post["note"];
-        $notificationURL = $post["notification_url"];
-        $payees = $post["payees"];
+        $payees = $post["payees"];*/
 
         $simpleXML= new SimpleXMLElement($this->xmltx->xmltx1312);
 
@@ -174,42 +174,46 @@ class Payment
         $simpleXML->Body->OrderNo=$orderNo;
         $simpleXML->Body->PaymentNo=$paymentNo;
         $simpleXML->Body->Amount=$amount;
-        $simpleXML->Body->PayerID=$payerID;
+        /*$simpleXML->Body->PayerID=$payerID;
         $simpleXML->Body->PayerName=$payerName;
         $simpleXML->Body->Usage=$usage;
         $simpleXML->Body->Remark=$remark;
-        $simpleXML->Body->Note=$note;
+        $simpleXML->Body->Note=$note;*/
         $simpleXML->Body->NotificationURL=$notificationURL;
-        foreach (explode(";",$payees) as $value)
+        /*foreach (explode(";",$payees) as $value)
         {
             $simpleXML->Body->PayeeList->addChild("Payee",$value);
-        }
+        }*/
 
         $xmlStr = $simpleXML->asXML();
 
         $message=base64_encode(trim($xmlStr));
         $signature=$this->cfcasign_pkcs12(trim($xmlStr));
 
-        return ["message"=>$message,"signature"=>$signature];
+        return ["message"=>$message,"signature"=>$signature,'payurl'=>$this->CICC_REAL['PAYURL']];
     }
 
     public function tx1312process_notice($post){
+        $res['ok'] = 1;
         $message = $post["message"];
         $signature = $post["signature"];
 
-        $txName = "";
         $plainText=trim(base64_decode($message));
         $ok=$this->cfcaverify($plainText,$signature);
         if($ok!=1)
         {
-            //$errInfo="验签失败";
-            return -1;
+            $res['ok'] = $ok;
         }else{
-            $txName = "";
             $simpleXML= new SimpleXMLElement($plainText);
-            $txCode=$simpleXML->Head->TxCode;
-            return $txCode;
+            $res['tx_code']=$simpleXML->Head->TxCode; //交易编码
+            $res['institution_id']=$simpleXML->Body->InstitutionID;
+            $res['payment_no']=$simpleXML->Body->PaymentNo;
+            $res['amount']=$simpleXML->Body->Amount;
+            $res['status']=$simpleXML->Body->Status;
+            $res['bank_notification_time']=$simpleXML->Body->BankNotificationTime;
+            $res['msg']=$plainText;
         }
+        return $res;
     }
 
 
