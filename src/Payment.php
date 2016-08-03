@@ -153,7 +153,7 @@ class Payment
     /**
      * 实现 在线支付流程 - 网关支付流程
      * @author wucheng
-     * @param $post
+     * @param $post {order_no,payment_no,amount,payer_id,payer_name,usage,remark,note,notification_url,payees}
      * @return array
      */
     public function tx1312process($post){
@@ -194,8 +194,8 @@ class Payment
     }
 
     public function tx1312process_notice($post){
-        $message = $_POST["message"];
-        $signature = $_POST["signature"];
+        $message = $post["message"];
+        $signature = $post["signature"];
 
         $txName = "";
         $plainText=trim(base64_decode($message));

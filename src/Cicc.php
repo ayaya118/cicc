@@ -11,15 +11,45 @@ namespace Cicc;
 
 class Cicc
 {
+    /**
+     * @var Payment
+     */
     private $payment;
     public function setConfig($config){
         $this->payment = new Payment();
         $this->payment->config($config);
     }
 
-    public function tx1312(){
-        exit("tx1312 demo");
+    /**
+     * 执行tx1312支付
+     * @author wucheng
+     * @param $data
+     */
+    public function tx1312($data){
+        return $this->payment->tx1312process($data);
     }
+
+    /**
+     * 接受支付状态通知
+     * @author wucheng
+     * @param $psot
+     * @return int
+     */
+    public function tx1312notice($psot){
+        return $this->payment->tx1312process_notice($psot);
+    }
+
+    /**
+     * 主动查询支付状态
+     * @author wucheng
+     * @param $institution_id
+     * @param $payment_no
+     * @return array
+     */
+    public function tx1320($institution_id,$payment_no){
+        return $this->payment->tx1320($institution_id,$payment_no);
+    }
+
 
 
 }
