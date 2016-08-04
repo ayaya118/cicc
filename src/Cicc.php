@@ -54,12 +54,11 @@ class Cicc
     /**
      * 主动查询支付状态
      * @author wucheng
-     * @param $institution_id
      * @param $payment_no
      * @return array
      */
-    public function tx1320($institution_id,$payment_no){
-        return $this->payment->tx1320($institution_id,$payment_no);
+    public function tx1320($payment_no){
+        return $this->payment->tx1320($payment_no);
     }
 
 

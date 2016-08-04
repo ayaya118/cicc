@@ -81,7 +81,7 @@ class Payment
             CURLOPT_VERBOSE        => 1                //
         );
 
-        $ch      = curl_init(TXURL);
+        $ch      = curl_init($this->CICC_REAL['TXURL']);
         curl_setopt_array($ch,$options);
         curl_setopt($ch,CURLOPT_HTTPHEADER,array("Expect:"));
         $content = curl_exec($ch);
@@ -109,7 +109,7 @@ class Payment
             CURLOPT_VERBOSE        => 1                //
         );
 
-        $ch      = curl_init(TXURL2);
+        $ch      = curl_init($this->CICC_REAL['TXURL2']);
         curl_setopt_array($ch,$options);
         curl_setopt($ch,CURLOPT_HTTPHEADER,array("Expect:"));
         $content = curl_exec($ch);
@@ -124,7 +124,7 @@ class Payment
         $post_data['message'] = $message;
         $post_data['signature'] = $signature;
 
-        $response= get_web_content(data_encode($post_data) );
+        $response= $this->get_web_content($this->data_encode($post_data) );
         $response=trim($response);
 
         return explode(",",$response);
@@ -134,7 +134,7 @@ class Payment
         $post_data['message'] = $message;
         $post_data['signature'] = $signature;
 
-        $response= get_web_content2(data_encode($post_data) );
+        $response= $this->get_web_content2($this->data_encode($post_data) );
         $response=trim($response);
 
         return explode(",",$response);
@@ -269,18 +269,18 @@ class Payment
      * @param $payment_no
      * @return array
      */
-    public function tx1320($institution_id,$payment_no){
+    public function tx1320($payment_no){
         $simpleXML= new SimpleXMLElement($this->xmltx->xmltx1320);
-        $simpleXML->Body->InstitutionID=$institution_id;
+        $simpleXML->Body->InstitutionID=$this->CICC_REAL['InstitutionID'];
         $simpleXML->Body->PaymentNo=$payment_no;
 
         $xmlStr = $simpleXML->asXML();
         $message=base64_encode(trim($xmlStr));
-        $signature=cfcasign_pkcs12(trim($xmlStr));
-        $response=cfcatx_transfer($message,$signature);
+        $signature=$this->cfcasign_pkcs12(trim($xmlStr));
+        $response=$this->cfcatx_transfer($message,$signature);
         $plainText=trim(base64_decode($response[0]));
 
-        $ok=cfcaverify($plainText,$response[1]);
+        $ok=$this->cfcaverify($plainText,$response[1]);
         if($ok!=1)
         {
             /*$errInfo="验签失败";
