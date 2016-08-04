@@ -193,6 +193,12 @@ class Payment
         return ["message"=>$message,"signature"=>$signature,'payurl'=>$this->CICC_REAL['PAYURL']];
     }
 
+    /**
+     * 支付 前端通知
+     * @author wucheng
+     * @param $post
+     * @return mixed
+     */
     public function tx1312process_notice($post){
         $res['ok'] = 1;
         $message = $post["message"];
@@ -216,6 +222,45 @@ class Payment
         return $res;
     }
 
+    /**
+     * 支付状态后台异步通知
+     * @author wucheng
+     * @param $post
+     */
+    public function tx1312process_notice_background($post){
+        $res['ok'] = 1;
+        $message = $post["message"];
+        $signature = $post["signature"];
+
+        $responseXML= new SimpleXMLElement($this->xmltx->xmlNotification);
+
+        $plainText=trim(base64_decode($message));
+        $ok=cfcaverify($plainText,$signature);
+        if($ok!=1)
+        {
+            $res['ok'] = $ok;
+            $errInfo="验签失败";
+            $responseXML->Head->Code = "2001";
+            $responseXML->Head->Message =$errInfo;
+        }else{
+            $simpleXML= new SimpleXMLElement($plainText);
+            $res['tx_code']=(string)$simpleXML->Head->TxCode; //交易编码
+            $res['institution_id']=(string)$simpleXML->Body->InstitutionID;
+            $res['payment_no']=(string)$simpleXML->Body->PaymentNo;
+            $res['amount']=(string)$simpleXML->Body->Amount;
+            $res['status']=(string)$simpleXML->Body->Status;
+            $res['bank_notification_time']=(string)$simpleXML->Body->BankNotificationTime;
+            $res['msg']=$plainText;
+
+            $responseXML->Head->Code = "2000";
+            $responseXML->Head->Message ="OK.";
+            $responseXMLStr = $responseXML->asXML();
+            $base64Str = base64_encode(trim($responseXMLStr));
+            $res['response']=$base64Str;
+        }
+
+        return $res;
+    }
 
     /**
      * 对账单的支付状态发送一个主动的查询
