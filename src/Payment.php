@@ -205,12 +205,12 @@ class Payment
             $res['ok'] = $ok;
         }else{
             $simpleXML= new SimpleXMLElement($plainText);
-            $res['tx_code']=$simpleXML->Head->TxCode; //交易编码
-            $res['institution_id']=$simpleXML->Body->InstitutionID;
-            $res['payment_no']=$simpleXML->Body->PaymentNo;
-            $res['amount']=$simpleXML->Body->Amount;
-            $res['status']=$simpleXML->Body->Status;
-            $res['bank_notification_time']=$simpleXML->Body->BankNotificationTime;
+            $res['tx_code']=(string)$simpleXML->Head->TxCode; //交易编码
+            $res['institution_id']=(string)$simpleXML->Body->InstitutionID;
+            $res['payment_no']=(string)$simpleXML->Body->PaymentNo;
+            $res['amount']=(string)$simpleXML->Body->Amount;
+            $res['status']=(string)$simpleXML->Body->Status;
+            $res['bank_notification_time']=(string)$simpleXML->Body->BankNotificationTime;
             $res['msg']=$plainText;
         }
         return $res;
