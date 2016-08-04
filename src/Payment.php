@@ -287,7 +287,7 @@ class Payment
             return $errInfo;*/
         }else{
             $simpleXML= new SimpleXMLElement($plainText);
-            $res['code'] = (string)$simpleXML->Head->Code;
+            $res['tx_code'] = (string)$simpleXML->Head->Code;
             $res['message'] = (string)$simpleXML->Head->Message;
             $res['institution_id'] = (string)$simpleXML->Body->InstitutionID;
             $res['payment_no'] = (string)$simpleXML->Body->PaymentNo;
@@ -295,7 +295,7 @@ class Payment
             $res['remark'] = (string)$simpleXML->Body->Remark;
             $res['status'] = (string)$simpleXML->Body->Status;
             $res['bank_notification_time'] = (string)$simpleXML->Body->BankNotificationTime;
-            $res['response'] =$plainText;
+            $res['msg'] =$plainText;
 
             return $res;
         }
