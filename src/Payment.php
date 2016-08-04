@@ -242,14 +242,14 @@ class Payment
             return $errInfo;*/
         }else{
             $simpleXML= new SimpleXMLElement($plainText);
-            $res['code'] = $simpleXML->Head->Code;
-            $res['message'] = $simpleXML->Head->Message;
-            $res['institution_id'] = $simpleXML->Body->InstitutionID;
-            $res['payment_no'] = $simpleXML->Body->PaymentNo;
-            $res['amount'] = $simpleXML->Body->Amount;
-            $res['remark'] = $simpleXML->Body->Remark;
-            $res['status'] = $simpleXML->Body->Status;
-            $res['bank_notification_time'] = $simpleXML->Body->BankNotificationTime;
+            $res['code'] = (string)$simpleXML->Head->Code;
+            $res['message'] = (string)$simpleXML->Head->Message;
+            $res['institution_id'] = (string)$simpleXML->Body->InstitutionID;
+            $res['payment_no'] = (string)$simpleXML->Body->PaymentNo;
+            $res['amount'] = (string)$simpleXML->Body->Amount;
+            $res['remark'] = (string)$simpleXML->Body->Remark;
+            $res['status'] = (string)$simpleXML->Body->Status;
+            $res['bank_notification_time'] = (string)$simpleXML->Body->BankNotificationTime;
             $res['response'] =$plainText;
 
             return $res;
