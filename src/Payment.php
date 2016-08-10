@@ -12,6 +12,7 @@ class Payment
 {
     private $CICC_REAL;
     private $xmltx;
+    private $tx1350Config;
     function __construct()
     {
         $this->xmltx = new Xmltx();
@@ -33,6 +34,10 @@ class Payment
      */
     public function config($config){
         $this->CICC_REAL = $config;
+    }
+
+    public function setTx1350Config($config){
+        $this->tx1350Config = $config;
     }
 
     // 签名函数
@@ -302,4 +307,105 @@ class Payment
 
         return [];
     }
+
+    /**
+     * 实现 1341-市场订单结算（结算）
+     * @author wucheng
+     * @param $post
+     * @return mixed
+     */
+    public function tx1341($serialNumber,$orderNo,$amount){
+        $institutionID = $this->CICC_REAL['InstitutionID'];
+        $serialNumber = $serialNumber;
+        $orderNo = $orderNo;
+        $amount = intval($amount);
+        /*$remark = $post["remark"];*/
+        $accountType = intval($this->tx1350Config['CiccAccountType']);
+        $paymentAccountName = $this->tx1350Config['CiccPaymentAccountName'];
+        $paymentAccountNumber = $this->tx1350Config['CiccPaymentAccountNumber'];
+        $bankID = $this->tx1350Config['CiccBankID'];
+        $accountName = $this->tx1350Config['CiccAccountName'];
+        $accountNumber = $this->tx1350Config['CiccAccountNumber'];
+        $branchName = $this->tx1350Config['CiccBranchName'];
+        $province = $this->tx1350Config['CiccProvince'];
+        $city = $this->tx1350Config['CiccCity'];
+
+        $simpleXML= new SimpleXMLElement($this->xmltx->xmltx1341);
+
+        // 4.赋值
+        $simpleXML->Body->InstitutionID=$institutionID;
+        $simpleXML->Body->SerialNumber=$serialNumber;
+        $simpleXML->Body->OrderNo=$orderNo;
+        $simpleXML->Body->Amount=$amount;
+        $simpleXML->Body->Remark="";
+        $simpleXML->Body->AccountType=$accountType;
+        $simpleXML->Body->PaymentAccountName=$paymentAccountName;
+        $simpleXML->Body->PaymentAccountNumber=$paymentAccountNumber;
+        $simpleXML->Body->BankAccount->BankID=$bankID;
+        $simpleXML->Body->BankAccount->AccountName=$accountName;
+        $simpleXML->Body->BankAccount->AccountNumber=$accountNumber;
+        $simpleXML->Body->BankAccount->BranchName=$branchName;
+        $simpleXML->Body->BankAccount->Province=$province;
+        $simpleXML->Body->BankAccount->City=$city;
+
+        $xmlStr = $simpleXML->asXML();
+        $message=base64_encode(trim($xmlStr));
+        $signature=$this->cfcasign_pkcs12(trim($xmlStr));
+        $response=$this->cfcatx_transfer($message,$signature);
+        $plainText=trim(base64_decode($response[0]));
+
+        $ok=$this->cfcaverify($plainText,$response[1]);
+        if($ok!=1)
+        {
+            return [];
+        }else{
+            $simpleXML= new SimpleXMLElement($plainText);
+            $post['tx_code'] = (string)$simpleXML->Head->Code;
+            $post['message'] = (string)$simpleXML->Head->Message;
+            $post['response'] = $plainText;
+            return $post;
+        }
+    }
+
+
+    /**
+     * 1350-市场订单结算交易查询
+     * @author wucheng
+     * @param $serialNumber
+     */
+    public function tx1350($serialNumber){
+        $institutionID = $this->CICC_REAL['InstitutionID'];
+        $serialNumber = $serialNumber;
+
+        $simpleXML= new SimpleXMLElement($this->xmltx->xmltx1350);
+
+        // 4.赋值
+        $simpleXML->Body->InstitutionID=$institutionID;
+        $simpleXML->Body->SerialNumber=$serialNumber;
+
+        $xmlStr = $simpleXML->asXML();
+        $message=base64_encode(trim($xmlStr));
+        $signature=$this->cfcasign_pkcs12(trim($xmlStr));
+        $response=$this->cfcatx_transfer($message,$signature);
+        $plainText=trim(base64_decode($response[0]));
+
+        $ok=$this->cfcaverify($plainText,$response[1]);
+        if($ok!=1)
+        {
+            return [];
+        }else{
+            $simpleXML= new SimpleXMLElement($plainText);
+            $post['institution_id'] = $institutionID;
+            $post['serial_number'] = $serialNumber;
+            $post['tx_code'] = (string)$simpleXML->Head->Code;
+            $post['message'] = (string)$simpleXML->Head->Message;
+            $post['status'] = (string)$simpleXML->Body->Status;
+            $post['response'] = $plainText;
+
+            return $post;
+        }
+    }
+
+
+
 }

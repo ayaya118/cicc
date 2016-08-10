@@ -21,6 +21,14 @@ class Cicc
         $this->payment->config($config);
     }
 
+    /**
+     * 配置市场订单结算
+     * @author wucheng
+     * @param $config
+     */
+    public function setTx1350Config($config){
+        $this->payment->setTx1350Config($config);
+    }
 
     /**
      * 执行tx1312支付
@@ -61,6 +69,27 @@ class Cicc
         return $this->payment->tx1320($payment_no);
     }
 
+    /**
+     * 实现 1341-市场订单结算（结算）
+     * @author wucheng
+     * @param $serialNumber   交易流水号
+     * @param $orderNo  订单编号
+     * @param $amount   金额
+     * @return mixed
+     */
+    public function tx1341($serialNumber,$orderNo,$amount){
+        return $this->payment->tx1341($serialNumber,$orderNo,$amount);
+    }
+
+    /**
+     * 1350-市场订单结算交易查询
+     * @author wucheng
+     * @param $serialNumber
+     * @return mixed
+     */
+    public function tx1350($serialNumber){
+        return $this->payment->tx1350($serialNumber);
+    }
 
 
 }
