@@ -360,6 +360,7 @@ class Payment
             return [];
         }else{
             $simpleXML= new SimpleXMLElement($plainText);
+			$post['institution_id'] = $institutionID;
             $post['tx_code'] = (string)$simpleXML->Head->Code;
             $post['message'] = (string)$simpleXML->Head->Message;
             $post['response'] = $plainText;
